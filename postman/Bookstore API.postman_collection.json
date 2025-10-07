@@ -1,0 +1,655 @@
+{
+	"info": {
+		"_postman_id": "7e0c707e-a1c2-4f42-8ff5-31ad6eaeec59",
+		"name": "Bookstore API",
+		"description": "Complete CRUD API for Bookstore Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48725042",
+		"_collection_link": "https://pavllnka22-2061407.postman.co/workspace/polina's-Workspace~323cc00a-5f8a-4fb0-8953-d2899f3b2898/collection/48725042-7e0c707e-a1c2-4f42-8ff5-31ad6eaeec59?action=share&source=collection_link&creator=48725042"
+	},
+	"item": [
+		{
+			"name": "📚 Books",
+			"item": [
+				{
+					"name": "Get All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/books/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								""
+							]
+						},
+						"description": "Show all books with author, genre and publisher details"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/books/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								"1",
+								""
+							]
+						},
+						"description": "Show specific book details"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": 1,\n  \"genre\": 1,\n  \"publisher\": 1,\n  \"published\": \"1925-04-10\",\n  \"price\": \"12.99\",\n  \" number_of_left\": 50,\n  \"description\": \"A classic novel of the Jazz Age\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/books/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								""
+							]
+						},
+						"description": "Create a new book"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"The Great Gatsby - Updated\",\n  \"author\": 1,\n  \"genre\": 1,\n  \"publisher\": 1,\n   \"published\": \"1925-04-10\",\n  \"price\": \"14.99\",\n  \" number_of_left\": 45,\n  \"description\": \"A classic novel of the Jazz Age - Updated description\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/books/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								"1",
+								""
+							]
+						},
+						"description": "Update existing book information"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/books/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								"1",
+								""
+							]
+						},
+						"description": "Delete a book"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "👤 Authors",
+			"item": [
+				{
+					"name": "Get All Authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authors/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								""
+							]
+						},
+						"description": "Show all authors with book counts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Author by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authors/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"1",
+								""
+							]
+						},
+						"description": "Show specific author details"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Author",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"F. Scott Fitzgerald\",\n  \"bio\": \"American novelist and short story writer\",\n  }"
+						},
+						"url": {
+							"raw": "{{base_url}}/authors/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								""
+							]
+						},
+						"description": "Create a new author"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Author",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Francis Scott Fitzgerald\",\n  \"bio\": \"American novelist and short story writer - Updated biography\",\n  }"
+						},
+						"url": {
+							"raw": "{{base_url}}/authors/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"1",
+								""
+							]
+						},
+						"description": "Update existing author information"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Author (Protected)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authors/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"1",
+								""
+							]
+						},
+						"description": "Attempt to delete author (will fail if author has books)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Author's Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authors/1/books/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"1",
+								"books",
+								""
+							]
+						},
+						"description": "Get all books by specific author"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "🏢 Publishers",
+			"item": [
+				{
+					"name": "Get All Publishers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/publishers/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"publishers",
+								""
+							]
+						},
+						"description": "Show all publishers with book counts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Publisher by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/publishers/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"publishers",
+								"1",
+								""
+							]
+						},
+						"description": "Show specific publisher details"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Publisher",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Penguin Classics\",\n  \"description\"}"
+						},
+						"url": {
+							"raw": "{{base_url}}/publishers/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"publishers",
+								""
+							]
+						},
+						"description": "Create a new publisher"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Publisher",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Penguin Random House\",\n  \"description\"}"
+						},
+						"url": {
+							"raw": "{{base_url}}/publishers/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"publishers",
+								"1",
+								""
+							]
+						},
+						"description": "Update existing publisher information"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Publisher (Protected)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/publishers/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"publishers",
+								"1",
+								""
+							]
+						},
+						"description": "Attempt to delete publisher (will fail if publisher has books)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "📖 Genres",
+			"item": [
+				{
+					"name": "Get All Genres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/genres/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"genres",
+								""
+							]
+						},
+						"description": "Retrieve all genres with book counts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Genre by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/genres/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"genres",
+								"1",
+								""
+							]
+						},
+						"description": "Show specific genre details"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Genre",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Science Fiction\",\n }"
+						},
+						"url": {
+							"raw": "{{base_url}}/genres/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"genres",
+								""
+							]
+						},
+						"description": "Create a new genre"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Genre",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Sci-Fi\",\n  }"
+						},
+						"url": {
+							"raw": "{{base_url}}/genres/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"genres",
+								"1",
+								""
+							]
+						},
+						"description": "Update existing genre information"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Genre (Protected)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/genres/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"genres",
+								"1",
+								""
+							]
+						},
+						"description": "Attempt to delete genre (will fail if genre has books)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Genre's Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/genres/1/books/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"genres",
+								"1",
+								"books",
+								""
+							]
+						},
+						"description": "Get all books in specific genre"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "🧪 Test Scenarios",
+			"item": [
+				{
+					"name": "Test Author Protection",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authors/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"1",
+								""
+							]
+						},
+						"description": "Should return error if author has books"
+					},
+					"response": []
+				},
+				{
+					"name": "Test Unique ISBN Validation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Duplicate Book\",\n  \"author\": 1,\n  \"genre\": 1,\n  \"publisher\": 1,\n   \"published\": \"2023-01-01\",\n  \"price\": \"19.99\",\n  \"number_of_left\": 10\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/books/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Data Validation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"\",\n  \"author\": null,\n  \"price\": -10\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/books/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								""
+							]
+						},
+						"description": "Should return validation errors for invalid data"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log('Making request to: ' + pm.request.url);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"",
+					"pm.test(\"Response time is acceptable\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+					"});",
+					"",
+					"pm.test(\"Content-Type header is present\", function () {",
+					"    pm.response.to.have.header(\"Content-Type\");",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000/api",
+			"type": "string"
+		}
+	]
+}
