@@ -32,6 +32,8 @@ def api_home(request):
 urlpatterns = [
     path('', api_home),
     path('admin/', admin.site.urls),
-    path('', include('books.urls')),
+    path('books/', include('books.urls')),
+    path('api/auth/', include('authentication.urls')),
+
 
 ]
