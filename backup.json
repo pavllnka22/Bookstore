@@ -1,0 +1,149 @@
+[
+{
+  "model": "books.book",
+  "pk": 1,
+  "fields": {
+    "title": "To Kill a Mockingbird",
+    "author": 1,
+    "price": "349.00",
+    "genre": 3,
+    "publisher": 1,
+    "pages": 452,
+    "published": "1960-10-06",
+    "language": "English",
+    "in_stock": true,
+    "description": "To Kill a Mockingbird is set in the 1930s in Maycomb, Alabama, and is narrated by young Scout Finch, who observes the events around her father, lawyer Atticus Finch, and the mysterious reclusive neighbor, Boo Radley. The central conflict arises when Atticus defends Tom Robinson, a Black man falsely accused of raping a white woman, highlighting the deep racial prejudice and injustice of the time. The story explores themes of childhood innocence, courage, and the fight against racial discrimination as Scout and her brother Jem come of age and learn about the complex, often cruel, realities of their community.",
+    "number_of_left": "23.00",
+    "image": ""
+  }
+},
+{
+  "model": "books.book",
+  "pk": 2,
+  "fields": {
+    "title": "1984",
+    "author": 3,
+    "price": "289.00",
+    "genre": 3,
+    "publisher": 2,
+    "pages": 267,
+    "published": "1948-01-01",
+    "language": "English",
+    "in_stock": true,
+    "description": "1984 is a dystopian novel by George Orwell published in 1949, warning against totalitarianism and mass surveillance through the story of Winston Smith in a future world dominated by the Party and Big Brother. The novel explores themes of political control, the manipulation of truth, and the suppression of individual freedom in the society of Oceania, where thought is controlled by the Thought Police and history is constantly rewritten.",
+    "number_of_left": "34.00",
+    "image": "books/1984.jpeg"
+  }
+},
+{
+  "model": "books.author",
+  "pk": 1,
+  "fields": {
+    "name": "Harper Lee",
+    "bio": "Nelle Harper Lee (1926–2016) was an American novelist best known for her Pulitzer Prize-winning 1960 novel To Kill a Mockingbird. Born in Monroeville, Alabama, Lee's childhood experiences, including the influence of her lawyer father and her friendship with Truman Capote, inspired her iconic novel about racial injustice in the American South. After moving to New York City to pursue writing, her manuscript was developed into To Kill a Mockingbird, a book that became a literary classic",
+    "image": ""
+  }
+},
+{
+  "model": "books.author",
+  "pk": 3,
+  "fields": {
+    "name": "George Orwell",
+    "bio": "George Orwell (born Eric Arthur Blair on June 25, 1903) was an English novelist, essayist, and critic best known for his anti-totalitarian novels Animal Farm (1945) and Nineteen Eighty-Four (1949). Born in India, he served in the British imperial police and fought in the Spanish Civil War, experiences that shaped his commitment to democratic socialism and his strong opposition to totalitarianism. His writings are famous for their lucid prose and critique of power, politics, and society",
+    "image": "images/orwell.jpeg"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Fiction"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 2,
+  "fields": {
+    "name": "Non-Fiction"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Novel"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Science Fiction"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Detective"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Thriller"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Romance"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 8,
+  "fields": {
+    "name": "Young Adult"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 9,
+  "fields": {
+    "name": "Biography"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 10,
+  "fields": {
+    "name": "Poetry"
+  }
+},
+{
+  "model": "books.genre",
+  "pk": 11,
+  "fields": {
+    "name": "Fantasy"
+  }
+},
+{
+  "model": "books.publisher",
+  "pk": 1,
+  "fields": {
+    "name": "KSD",
+    "description": "KSD is a Ukrainian publishing house, known as Family Leisure Club (КСД), that publishes a wide range of books, from national and foreign bestsellers to classic and contemporary works in Ukrainian. They also produce e-books and have a digital bookstore with a mobile app for easy purchasing, wish lists, and a personal library. KSD aims to make literature accessible to Ukrainian readers and supports both established and emerging authors. "
+  }
+},
+{
+  "model": "books.publisher",
+  "pk": 2,
+  "fields": {
+    "name": "Nebo BookLab Publishing",
+    "description": "Nebo BookLab Publishing is a Ukrainian publishing house founded in 2015 that focuses on illustrated fiction and fantasy for children, teenagers, and adults, emphasizing high print and design quality. They publish a mix of world bestsellers and lesser-known authors, featuring unique illustrations by Ukrainian artists, and are known for projects like the children's art encyclopedia \"Van Gogh's Starry Night and Other Stories\" and the \"Maiechka\" series, which promotes humane treatment of stray animals."
+  }
+}
+]

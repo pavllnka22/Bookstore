@@ -164,5 +164,15 @@ python manage.py runserver
 
 ---
 
-P.S. На жаль, багато з чим не встигла розібратись і багато вимог не виконала
+## How to run tests:
 
+* **Install dependencies(first time only):
+
+```
+pip install pytest pytest-django
+```
+
+* ** Run all tests
+```
+pytest
+```

@@ -15,7 +15,6 @@ logger = logging.getLogger('authentication')
 
 User = get_user_model()
 
-
 class RegisterView(APIView):
     permission_classes = [permissions.AllowAny]
 
@@ -24,12 +23,13 @@ class RegisterView(APIView):
         if serializer.is_valid():
             user = serializer.save()
             return Response(
-                {'message': 'User registered successfully'},
+                {
+                    'user': RegisterSerializer(user).data,
+                    'message': 'User registered successfully'
+                },
                 status=status.HTTP_201_CREATED
             )
-        print("❌ Registration error details:", serializer.errors)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 class LoginView(APIView):
     permission_classes = [permissions.AllowAny]
@@ -42,7 +42,10 @@ class LoginView(APIView):
                 'access': str(refresh.access_token),
                 'refresh': str(refresh)
             })
-        return Response({'error': 'Invalid credentials'}, status=401)
+        return Response(
+            {'error': 'Invalid credentials'},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
 
 class LogoutView(APIView):
     permission_classes = (permissions.AllowAny,)
@@ -56,7 +59,7 @@ class LogoutView(APIView):
             logger.info(f"User logged out successfully: {refresh}")
             return Response({'message': 'Logout successful'}, status=status.HTTP_200_OK)
         except Exception as e:
-            return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'error': str(e)}, status=status.HTTP_401_UNAUTHORIZED)
 
 
 class ProtectedAPIView(APIView):
